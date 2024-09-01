@@ -46,3 +46,43 @@ function fizzBuzz(input){
   return input;
   
 }
+
+
+checkSpeed(50);
+
+function checkSpeed(speed){
+  let number = math.floor(speed);
+
+  if(number > 70){
+    let x = number - 70;
+    let y = x / 5;
+    if(y === 12){
+      return 'Licence Suspended';
+    }
+    return ('Points, ' + y);
+
+  }
+  return 'Ok';
+
+
+}
+
+
+showNumbers(10);
+function showNumbers(limit){
+  for(let i = 0; i <= limit;  i++){
+    const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
+    console.log(i, message);
+
+  }
+
+}
+
+
+const isActive = true;
+if(isActive) console.log('Hello');
+
+function countTruthy(array){
+  
+}
+
