@@ -121,7 +121,7 @@ now.setFullYear(2017);
 
 let street = '1';
 let city = '2';
-;et zip = '22';
+let zip = '22';
 
 function showAddress(address){
   for(let key in address ){
@@ -136,7 +136,7 @@ showAddress(address);
 // factory function 
 
 function createAddress(street, city, zip){
-  return = {street,
+  return {street,
   city,
   zip
   };
@@ -151,11 +151,72 @@ function createAddress(street, city, zip){
 
 }
 
+// are equal to each other
 
 
 function areEqual(address1, address2){
+  return address1.street === address2.street &&
+  address1.city === address2.city && 
+  address1.zip ===  address2.zip;
   
 
 }
+// not the same objects, if they point to the same point in memory 
 
-function areSame(address1, address2)
+function areSame(address1, address2){
+  return address1 === address2;
+
+}
+
+
+
+// title 
+// body 
+// author 
+// views 
+// comments 
+// aruthor, body
+// isLive 
+
+
+// object 
+
+let post = {
+  title : 'a',
+  body: 'b',
+  author: 'c',
+  views: 10,
+  comments: [
+    {author: 'a', body: 'b'},
+    {author: 'c', body: 'd'},
+
+  ],
+  isLive: true
+
+};
+
+// construtor function 
+
+
+function Post( title, author, body){
+  this.title = title;
+  this.author = author;
+  this.body = body;
+
+  this.isLive = false;
+  this.views = 0;
+  this.comments = [];
+}
+
+
+let priceRanges = [
+  {label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10},
+  {label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20},
+  {label: '$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50},
+  
+]
+
+let restaurants = [
+  {averagePerPerson: 5}
+]
+
